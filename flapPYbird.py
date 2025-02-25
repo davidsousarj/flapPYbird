@@ -147,16 +147,16 @@ class Obstacle:
 
 	def draw(self):
 		pygame.draw.rect(screen, purple, (self.x, 0,
-										  self.width, self.y1))
+						  self.width, self.y1))
 		pygame.draw.rect(screen, purple, (self.x, self.y2, 
-										  self.width,
-										  sizey - gsize - self.y2))
+						  self.width,
+						  sizey - gsize - self.y2))
 
 	def detect_restart(self):
 		if self.x <= -self.width:
 			self.x = space*4
 			self.yc = randint(self.height//2,
-							  sizey - gsize - self.height//2)
+					  sizey - gsize - self.height//2)
 			self.y1 = self.yc - self.height//2
 			self.y2 = self.yc + self.height//2
 
@@ -252,9 +252,9 @@ while run:
 	# Draw ground
 	for i in range(ceil( sizex / gsize / 2.0)+1):
 		pygame.draw.rect(screen, ground1, (2*i*gsize - step*vx,
-										   sizey - gsize, gsize, gsize))
+						   sizey - gsize, gsize, gsize))
 		pygame.draw.rect(screen, ground2, ((2*i+1)*gsize - step*vx,
-										   sizey - gsize, gsize, gsize))
+						   sizey - gsize, gsize, gsize))
 	step +=1	
 	if step == 2*gsize: step = 0
 
